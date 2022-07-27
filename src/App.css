@@ -34,3 +34,9 @@
   align-items: center;
   justify-content: center;
 }
+.left-list{
+  margin-left:415px;
+}
+.nav-right{
+  margin-right: 20px;
+}

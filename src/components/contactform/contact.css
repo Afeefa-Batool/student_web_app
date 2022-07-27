@@ -1,0 +1,11 @@
+.background{
+    /* background-color: #F5947D; */
+    background-image: url("https://img.freepik.com/free-vector/ice-rink-night-empty-public-place-skating_33099-2448.jpg?t=st=1658831645~exp=1658832245~hmac=596df80ff70d443ce4ffcddbfb78f47b4aef3017f92ff09eb61224fc44e442d5&w=996");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 790px;
+    width: 90%;
+    background-position: center;
+margin: auto;
+}

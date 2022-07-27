@@ -1,30 +1,24 @@
-import img1 from './img/b.jpg'
-import img2 from './img/c.jpg'
-import img3 from './img/a.jpg';
+const data = {
+  products: [
+    {
+      id: 1,
 
-const data={
-    teacherData:[
-        {
-           id:1,
-
-           img:img1,
-           title:'Professor Afifa',
-           desc:'simply dummy text of the printing and typesetting',
-        },
-        {
-            id:2,
-            img:img2,
-            title:'Tester Jawad',
-            desc:' long established fact that a reader will be distracted',
-          
-         },
-         {
-            id:3,
-            img:img3,
-            title:'Software Developer Fawad',
-            desc:'indignation and dislike men who are so beguiled and demoralized',
-         
-         }
-    ],
-};
+      img: '../public/img/b.jpg',
+      title: "Professor Afifa",
+      desc: "simply dummy text of the printing and typesetting",
+    },
+    {
+      id: 2,
+      img: '../public/img/c.jpg',
+      title: "Tester Jawad",
+      desc: " long established fact that a reader will be distracted",
+    },
+    {
+      id: 3,
+      img: '../public/img/a.jpg',
+      title: "Software Developer Fawad",
+      desc: "indignation and dislike men who are so beguiled and demoralized",
+    }
+  ]
+}
 export default data;
