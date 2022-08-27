@@ -1,29 +1,25 @@
 import React from "react";
 import "../siginup/siginup.css";
-import { auth } from "../../config/firebase";
+// import { auth } from "../../config/firebase";
+import { auth } from "../../firebase";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 const Siginup = () => {
-
-
-
   const [email, setEmail] = useState("");
 
   const [password, setPassword] = useState("");
   const [array, setNewArray] = useState([]);
   const navigate = useNavigate();
-
   const onSubmit = async (e) => {
     e.preventDefault();
     const data = { email: email, password: password };
     setNewArray([...array, data]);
-    // console.log(array);
     try {
       const result = await auth.createUserWithEmailAndPassword(email, password);
+      console.log(result)
       toast.success(`welcome ${email}`);
 
-      // toast.success("welcome user");
       navigate("/login");
     } catch (err) {
       toast.error("somthing wrong");
@@ -56,9 +52,10 @@ const Siginup = () => {
                       <input
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        type="email"
-                        id="form2Example1"
+                        type="text"
                         className="form-control"
+                        autoComplete="off"
+
                       />
                     </div>
                     {/* Password input */}
@@ -70,11 +67,16 @@ const Siginup = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         type="password"
-                        id="form2Example2"
                         className="form-control"
+                        autoComplete="off"
+
                       />
+                              <div className="col-auto mt-3">
+            <button type="submit" className="btn btn-primary mb-3">
+              Submit
+            </button>
+          </div>
                     </div>
-                    {/* 2 column grid layout for inline styling */}
                     <div className="row mb-4">
                       <div className="col d-flex justify-content-center">
                         {/* Checkbox */}
@@ -100,12 +102,8 @@ const Siginup = () => {
                         <a href="#!">Forgot password?</a>
                       </div>
                     </div>
-                    {/* Submit button */}
-                    <div className="text-center">
-                      <button type="button" className="btn btn-primary btn-lg ">
-                        Sign in
-                      </button>
-                    </div>
+                 
+           
                   </form>
                 </div>
               </div>

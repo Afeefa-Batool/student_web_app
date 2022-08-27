@@ -1,6 +1,6 @@
 import React from "react";
 import "../login/login.css";
-import { auth } from "../../config/firebase";
+import {auth} from '../../firebase'
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -73,7 +73,11 @@ const Login = () => {
                         autoComplete="off"
                         value={password}
                       />
-                     
+                      <div className="col-auto mt-3">
+            <button type="submit" className="btn btn-primary mb-3">
+              Submit
+            </button>
+          </div>
                     </div>
                     {/* 2 column grid layout for inline styling */}
                     <div className="row mb-4">
@@ -102,14 +106,14 @@ const Login = () => {
                       </div>
                     </div>
                     {/* Submit button */}
-                    <div className="text-center">
+                    {/* <div className="text-center">
                     <button
                       type="button"
                       className="btn btn-primary btn-lg "
                     >
                       Sign in
                     </button>
-                    </div>
+                    </div> */}
           
                   </form>
                 </div>

@@ -1,22 +1,34 @@
+
+import img1 from './img/b.jpg'
+import img2 from './img/c.jpg'
+
+
+
+import img3 from './img/a.jpg';
+
+
+
+
+
 const data = {
   products: [
     {
       id: 1,
 
-      img: '../public/img/b.jpg',
+      img: img1,
       title: "Professor Afifa",
       desc: "simply dummy text of the printing and typesetting",
     },
     {
       id: 2,
-      img: '../public/img/c.jpg',
+      img: img2,
       title: "Tester Jawad",
       desc: " long established fact that a reader will be distracted",
     },
     {
       id: 3,
-      img: '../public/img/a.jpg',
-      title: "Software Developer Fawad",
+      img: img3,
+      title: "Software Developer",
       desc: "indignation and dislike men who are so beguiled and demoralized",
     }
   ]

@@ -13,10 +13,9 @@ import { Routes, Route } from "react-router-dom";
 import { ToastContainer, Zoom, Bounce, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import data from "./data";
-import { auth } from "./config/firebase";
+import { auth } from "./firebase";
 
 function App() {
-  // const { products } = data;
   const [user, setUser] = useState(null);
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
@@ -26,7 +25,7 @@ function App() {
   }, []);
   return (
     <>
-      <Navbar />
+      <Navbar user={user}/>
       <ToastContainer />
       <Routes>
         <Route exact path="/" element={<Home />} />

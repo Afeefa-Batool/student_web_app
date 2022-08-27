@@ -4,11 +4,14 @@ const Contact = () => {
     return (
        
 <div>
+<h1 className="text-black mb-4 text-center">Student Registration Form</h1>
+
 <section className='background mt-2'  >
+  
   <div className="container h-100">
+    
     <div className="row d-flex justify-content-center align-items-center h-100">
       <div className="col-xl-9">
-        <h1 className="text-white mb-4 text-center">Student Registration Form</h1>
         <div className="card" style={{borderRadius: 15}}>
           <div className="card-body">
             <div className="row align-items-center pt-4 pb-3">
